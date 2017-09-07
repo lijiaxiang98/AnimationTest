@@ -1,1 +1,0 @@
-﻿# Win10 Connected animation Test
