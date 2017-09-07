@@ -31,11 +31,13 @@ namespace AnimationTest
         {
             base.OnNavigatedTo(e);
             ConnectedAnimation rectangleAni = ConnectedAnimationService.GetForCurrentView().GetAnimation("RTAni");
-            
-            if (rectangleAni!=null)
+            ConnectedAnimation textblockAni = ConnectedAnimationService.GetForCurrentView().GetAnimation("TBAni");
+            ConnectedAnimation buttonAni = ConnectedAnimationService.GetForCurrentView().GetAnimation("BTAni");
+            if (rectangleAni!=null&& textblockAni!=null)
             {
-                rectangleAni.TryStart(RT1,new UIElement[] { TB1, BackButton });
-               
+                rectangleAni.TryStart(RT1);
+                textblockAni.TryStart(TB1);
+                buttonAni.TryStart(BackButton);
             }
         }
 

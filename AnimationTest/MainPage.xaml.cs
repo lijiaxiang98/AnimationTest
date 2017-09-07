@@ -30,7 +30,8 @@ namespace AnimationTest
         private void MyButton_Click(object sender, RoutedEventArgs e)
         {
             ConnectedAnimationService.GetForCurrentView().PrepareToAnimate("RTAni", RT1);
-            
+            ConnectedAnimationService.GetForCurrentView().PrepareToAnimate("TBAni", TB1);
+            ConnectedAnimationService.GetForCurrentView().PrepareToAnimate("BTAni", MyButton);
             Frame.Navigate(typeof(NewPage));
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
